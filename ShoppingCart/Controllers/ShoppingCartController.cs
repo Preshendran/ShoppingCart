@@ -17,7 +17,7 @@ namespace ShoppingCart.Controllers
     [Route("cart")]
     public IActionResult CreateCart()
     {
-      return View();
+      return Ok();
     }
   }
 }
