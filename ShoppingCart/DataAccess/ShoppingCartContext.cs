@@ -9,9 +9,9 @@ namespace ShoppingCart.DataAccess
     public DbSet<Item> Item { get; set; }
     public DbSet<CartItem> CartItem { get; set; }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    public ShoppingCartContext(DbContextOptions<ShoppingCartContext> options)
+      : base(options)
     {
-      optionsBuilder.UseSqlServer(Environment.GetEnvironmentVariable("ConnectionStrings__ShoppingCart"));
     }
 
 
